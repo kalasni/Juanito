@@ -9,7 +9,7 @@ import java.awt.event.*;
  *  principalmente se dan unas instrucciones basicas sobre lo que hace
  *  el programa y como utilizarlo.
  *
- * @author Kalasni
+ * @author ocm128
  * @version 1.0
  */
 
@@ -34,27 +34,27 @@ class LeeMe extends JPanel {
         eti.setFont(new Font("Times-Roman", Font.BOLD, 17));
 
         // Caracteristicas del area de texto jtext
-        jtext = new JTextArea("Juanito es una aplicación desarrollada en lenguaje Java." +
+        jtext = new JTextArea("Juanito es una aplicaciï¿½n desarrollada en lenguaje Java." +
          "\n\nSu proposito principal es mostrar diversas fechas como" +
-         " calendarios de los años o meses introducidos, buscar la fecha en la" +
-         " que caerá la festividad de San juan del monte de determinado año, o lo " +
+         " calendarios de los aï¿½os o meses introducidos, buscar la fecha en la" +
+         " que caerï¿½ la festividad de San juan del monte de determinado aï¿½o, o lo " +
          " mismo con las fechas de semana santa y fiestas de carnaval." +
-         "\n\nSu uso es simple y su cometido tambíen." +
+         "\n\nSu uso es simple y su cometido tambï¿½en." +
          "\n\n\nMES ACTUAL" +
-         "\nMuestra el mes actual del año en curso. Imprime corchetes alrededor del" +
+         "\nMuestra el mes actual del aï¿½o en curso. Imprime corchetes alrededor del" +
          " dia correspondiente en el que se ejecuta el programa." +
-         "\n\nMES DEL AÑO" +
-         "\nMuestra el mes correspondiente al mes y el año solicitados. El año " +
-         "introducido deberá ser mayor de 13." +
-         "\n\nAÑO COMPLETO" +
-         "\nMuestra todos los meses del año solicitado. Su contenido se puede guardar " +
+         "\n\nMES DEL Aï¿½O" +
+         "\nMuestra el mes correspondiente al mes y el aï¿½o solicitados. El aï¿½o " +
+         "introducido deberï¿½ ser mayor de 13." +
+         "\n\nAï¿½O COMPLETO" +
+         "\nMuestra todos los meses del aï¿½o solicitado. Su contenido se puede guardar " +
          "en un fichero accediendo en la barra de menu a 'Archivo' -> 'Guardar como'." +
-         "\nPara la visualización correcta del mismo o si se desea imprimir, se debe usar" +
+         "\nPara la visualizaciï¿½n correcta del mismo o si se desea imprimir, se debe usar" +
          " un editor con un tipo de fuente de las llamadas monospaced, " +
          " por ejemplo 'Courier'. " +
          "\n\nSAN JUAN DEL MONTE" +
          "\nMuestra el mes y la fecha (lunes de San juan) en la que cae dicha fiesta" +
-         " en el año solicitado." +
+         " en el aï¿½o solicitado." +
          "\n\nSEMANA SANTA" +
          "\nIdem al anterior exceptuando que la fecha remarcada corresponde a" +
          " viernes santo." +

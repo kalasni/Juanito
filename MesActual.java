@@ -7,11 +7,11 @@ import java.awt.event.*;
 
 /**
  *   Esta clase se encarga de mostrar los componentes necesarios para
- *   la visualización del mes actual del año en curso.
+ *   la visualizaciï¿½n del mes actual del aï¿½o en curso.
  *   Imprime corchetes alrededor del dia correspondiente en el que se
  *   ejecuta el programa.
  *
- *   @author Kalasni
+ *   @author ocm128
  *   @version 1.0
  *   @since 21-06-2005
  *

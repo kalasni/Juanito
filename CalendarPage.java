@@ -9,21 +9,21 @@ import java.text.*;
 
 /**
  * Esta es la clase donde van los metodos principales como el caso de imprimir
- * el año completo, el mes del año indicado o la fecha actual.
- * Los metodos principales de este clase están sacados del programa cal2
+ * el aï¿½o completo, el mes del aï¿½o indicado o la fecha actual.
+ * Los metodos principales de este clase estï¿½n sacados del programa cal2
  * para uso en consola realizado por Luis Colorado en lenguaje C.
  * Basicamente la logica es la misma, si bien he tenido que modificar algunas
  * partes para transcribirlo eficientemente a Java.
  *
- * El calendario tiene en cuenta la correción realizada en 1752 para cambiar
- * del calendario juliano (bisiestos cada cuatro años) al calendario gregoriano
- * (bisiestos multiplos de 4 menos múltiplos de 100 menos múltiplos de 400)
+ * El calendario tiene en cuenta la correciï¿½n realizada en 1752 para cambiar
+ * del calendario juliano (bisiestos cada cuatro aï¿½os) al calendario gregoriano
+ * (bisiestos multiplos de 4 menos mï¿½ltiplos de 100 menos mï¿½ltiplos de 400)
  * de eliminar los dias 3 al 13 de septiembre de 1752.
  *
- * No se podrá representar un año anterior al 13.
+ * No se podrï¿½ representar un aï¿½o anterior al 13.
  *
  * @since 16-06-05
- * @author Kalasni
+ * @author ocm128
  * @version 1.0
  */
 public class CalendarPage {
@@ -52,7 +52,7 @@ public class CalendarPage {
     }
 
     /**
-     * Imprime los doce meses del año introducido como parametro.
+     * Imprime los doce meses del aï¿½o introducido como parametro.
      * @param int anio
      * @return void
      */
@@ -138,7 +138,7 @@ public class CalendarPage {
 
 
     /**
-     * Imprime el mes completo del año y mes en curso.
+     * Imprime el mes completo del aï¿½o y mes en curso.
      * Utilizado en la clase MesActual.java.
      * @param int mes
      * @param int anio
@@ -156,7 +156,7 @@ public class CalendarPage {
 		temp.append("     Lu  Ma  Mi  Ju  Vi  Sa  Do").append("\n"); // 3 espa
 		temp.append("     ==========================").append("\n");
 		desfase = primero_de_mes(mes, anio);
-		// Añadimos desplazamiento a la dcha de la primera linea
+		// Aï¿½adimos desplazamiento a la dcha de la primera linea
 		temp.append("    "); // 3 espacios
 		for(int i = 0; ; i++) {
 		    int resaltado;
@@ -197,7 +197,7 @@ public class CalendarPage {
 	}
 
      /**
-       * Metodo que imprime el mes del año indicado.
+       * Metodo que imprime el mes del aï¿½o indicado.
        * @param int mes
        * @param int anio
        * @return void
@@ -221,7 +221,7 @@ public class CalendarPage {
 		temp.append("     Lu  Ma  Mi  Ju  Vi  Sa  Do").append("\n"); // 3 esp
 		temp.append("     ==========================").append("\n");
 		desfase = primero_de_mes(mes, anio);
-		// Añadimos desplazamiento a la dcha de la primera linea
+		// Aï¿½adimos desplazamiento a la dcha de la primera linea
 		temp.append("    "); // 4 espacios
 		for(int i = 0; ; i++) {
 		    if(desfase > 0) {
@@ -247,7 +247,7 @@ public class CalendarPage {
 	}
 
         /**
-         * Metodo que calcula el dia de la semana del 1 de enero del año que
+         * Metodo que calcula el dia de la semana del 1 de enero del aï¿½o que
          * se le pasa como parametro.
          * @param int
          * @return int
@@ -255,7 +255,7 @@ public class CalendarPage {
         private int primero_de_enero (int anio) {
 
              if(anio <= 1752) {
-                 int grupo_4; // Grupo de 4 años
+                 int grupo_4; // Grupo de 4 aï¿½os
                  anio--;
                  grupo_4 = anio / 4;
                  anio %= 4;
@@ -275,7 +275,7 @@ public class CalendarPage {
 
         /**
          * Metodo que calcula el dia de la semana del primero del mes indicado
-         * como primer parametro y del año pasado como segundo parametro.
+         * como primer parametro y del aï¿½o pasado como segundo parametro.
          * @param int mes
          * @param int anio
          * @return int
@@ -305,7 +305,7 @@ public class CalendarPage {
                   return (primero_de_enero(anio) +  dias_mes[mes][2]) % 7;
 			  }
               else if(bisiesto(anio) == 1) {
-                  // Si el año es bisiesto
+                  // Si el aï¿½o es bisiesto
                   return (primero_de_enero(anio) +  dias_mes[mes][1]) % 7;
 			  }
 			  else
@@ -323,7 +323,7 @@ public class CalendarPage {
         int siguiente (int dia, int mes, int anio) {
             if(anio < 1)
                 return -1;
-            /* La excepción contemplada en el calendario gregoríano de
+            /* La excepciï¿½n contemplada en el calendario gregorï¿½ano de
              * eliminar los dias 3 al 13 de septiembre de 1752.
              */
             if(anio == 1752 && mes == 9 && dia == 2)
@@ -355,17 +355,17 @@ public class CalendarPage {
         }
 
         /**
-         * Metodo que determina si el año pasado como parámetro es bisiesto
+         * Metodo que determina si el aï¿½o pasado como parï¿½metro es bisiesto
          * o no lo es.
-         * Los años bisiestos son aquellos multiplos de 4 (ej: 2004), y los multiplos
-         * de 100 cuando a la vez son multiplos de 400 (ej: 1800 no sería bisiesto, 2000
-         * sí lo sería).
+         * Los aï¿½os bisiestos son aquellos multiplos de 4 (ej: 2004), y los multiplos
+         * de 100 cuando a la vez son multiplos de 400 (ej: 1800 no serï¿½a bisiesto, 2000
+         * sï¿½ lo serï¿½a).
          * @param int anio
          * @return
          */
         int bisiesto (int anio)
         {
-            // 1 sería bisiesto, 0 no.
+            // 1 serï¿½a bisiesto, 0 no.
              if (anio < 1752) {
         		if (anio % 4 == 0) return 1;
         		return 0;
@@ -395,13 +395,13 @@ public class CalendarPage {
 
   /******************************************************
    *                                                                                                 *
-   *    A partir de aquí van los metodos para calcular y mostrar        *
+   *    A partir de aquï¿½ van los metodos para calcular y mostrar        *
    *    los dias festivos.                                                                     *
    *																								  *
    * *****************************************************/
 
         /**
-         * Obtiene la fecha del domingo de resurreción del array y separa
+         * Obtiene la fecha del domingo de resurreciï¿½n del array y separa
          * la cadena en el mes y el dia introduciendo cada una de ellas en
          * un String diferente.
          * @param int  annio
@@ -416,8 +416,8 @@ public class CalendarPage {
 
         /**
          * Obtiene y devuelve la fecha de Viernes santo a partir de la fecha del
-         * domingo de resurreción de ese año concreto.
-         * Viernes santo sería dos dias atrás.
+         * domingo de resurreciï¿½n de ese aï¿½o concreto.
+         * Viernes santo serï¿½a dos dias atrï¿½s.
          * @return int
          */
         public int getDiaSS() {
@@ -426,7 +426,7 @@ public class CalendarPage {
         }
 
         /**
-         * Obtiene y devuelve la fecha del mes de semana santa de ese año
+         * Obtiene y devuelve la fecha del mes de semana santa de ese aï¿½o
          * concreto introducido en el metodo semana_santa(int annio)
          * @return int
          */
@@ -436,7 +436,7 @@ public class CalendarPage {
         }
 
         /**
-         * Obtiene y devuelve la fecha del domingo de resurreción obtenida en
+         * Obtiene y devuelve la fecha del domingo de resurreciï¿½n obtenida en
          * el metodo semana_santa(int annio). Utilizada para calcular otros
          * festivos.
          * @return int
@@ -446,7 +446,7 @@ public class CalendarPage {
         }
 
         /**
-         * Según el mes en el que cae Semana Santa un año concreto, aumenta
+         * Segï¿½n el mes en el que cae Semana Santa un aï¿½o concreto, aumenta
          * el mes de San Juan para llevar la cuenta de los dias.
          * @param int cont
          * @return void
@@ -464,7 +464,7 @@ public class CalendarPage {
         }
 
         /**
-         * Calcula el dia en el que cae San juan de ese año concreto a partir
+         * Calcula el dia en el que cae San juan de ese aï¿½o concreto a partir
          * de los datos obtenidos en el metodo semana_santa(anio).
          * @param int anioSJ
          * @return int
@@ -477,11 +477,11 @@ public class CalendarPage {
                 mesFes(5);
                 diaFinal = ((31 - getDomResu()) + 30);
                 diaFinal = 50 - diaFinal;
-                temp = diaFinal;
+                temp = diaFinal; 
             }
             if(getMesSS() == 4) {
                 diaFinal = (30 - getDomResu());
-                diaFinal = 50 - diaFinal;
+                diaFinal = 50 - diaFinal; 
                 if(diaFinal < 31) {
                     mesFes(5);
                     temp = diaFinal;
@@ -501,7 +501,7 @@ public class CalendarPage {
         ******************************************/
 
         /**
-         * Calcula el dia en el que cae Carnaval de ese año concreto a partir
+         * Calcula el dia en el que cae Carnaval de ese aï¿½o concreto a partir
          * de los datos obtenidos en el metodo semana_santa(anio).
          * @param int anioCar
          * @return int
@@ -559,7 +559,7 @@ public class CalendarPage {
         }
 
         /**
-         * Imprime el mes completo del mes y año introducidos como parametros.
+         * Imprime el mes completo del mes y aï¿½o introducidos como parametros.
          * El parametro diaFestivo se utiliza para pasarle el dia festivo que hay
          * que imprimir entre corchetes.
          * @param int mes
@@ -578,7 +578,7 @@ public class CalendarPage {
     		temp.append("     Lu  Ma  Mi  Ju  Vi  Sa  Do").append("\n");
     		temp.append("     ==========================").append("\n");
     		desfase = primero_de_mes(mes, anio);
-    		// Añadimos desplazamiento a la dcha de la primera linea
+    		// Aï¿½adimos desplazamiento a la dcha de la primera linea
     		temp.append("    "); // 3 antes
     		for(int i = 0; ; i++) {
     		    if(desfase > 0) {

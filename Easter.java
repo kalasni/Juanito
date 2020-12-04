@@ -21,19 +21,19 @@
  * La luna llena que precede al domingo de pascua y que es la primera despues
  * del equinoccio de primavera, es llamada "Luna llena de pascua". Es calculada
  * usando dos herramientas: El numero dorado y la epacta.
- * El numero dorado describe la relación entre el numero del año y las sucesiones
- * de las etapas lunares durante ese año. La epacta mide la edad de la luna durante
- * un determinado día.
- * Conociendo el numero dorado de un determiando año se puede calcular la epacta.
- * Se asume que todos los años se describen con cuatro digitos (1900, 0099, etc).
- * Este programa calcula el domingo de Pascua según la iglesia católica. Este día es
+ * El numero dorado describe la relaciï¿½n entre el numero del aï¿½o y las sucesiones
+ * de las etapas lunares durante ese aï¿½o. La epacta mide la edad de la luna durante
+ * un determinado dï¿½a.
+ * Conociendo el numero dorado de un determiando aï¿½o se puede calcular la epacta.
+ * Se asume que todos los aï¿½os se describen con cuatro digitos (1900, 0099, etc).
+ * Este programa calcula el domingo de Pascua segï¿½n la iglesia catï¿½lica. Este dï¿½a es
  * diferente del calendario griego o del domingo de pascua ortodoxo.
  *
  * Este programa de acuerdo con la licencia que posee (GNU), ha sido modificado
- * en varios aspectos y le han sido añadido otros metodos con el fín de adecuarlo
+ * en varios aspectos y le han sido aï¿½adido otros metodos con el fï¿½n de adecuarlo
  * a los requerimientos necesarios.
  *
- * @author Kalasni
+ * @author ocm128
  * @since 6-9-2005
  *
  *********************************************************************/
@@ -51,7 +51,7 @@ public class Easter {
 
     //Tabla de lunas llenas pascuales dependiendo de la epacta
     //Seguramente habra una forma mejor de hacer esto, pero por ahora yo no la
-    // se
+    // sï¿½
     private static Fecha[] pascal = {
 
             new Fecha(0, 0), new Fecha(0, 0), new Fecha(0, 0), new Fecha(0, 0),
@@ -68,7 +68,7 @@ public class Easter {
     private static int monthday[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31,
             30, 31 };
 
-    // Numero de dias en cada mes siendo el año bisiesto
+    // Numero de dias en cada mes siendo el aï¿½o bisiesto
     private static int leapmonthday[] = { 31, 29, 31, 30, 31, 30, 31, 31, 30,
             31, 30, 31 };
 
@@ -85,16 +85,16 @@ public class Easter {
                             : false));
         }
 
-    } // Fun isLeap()
+    } // Fin isLeap()
 
-    //numero de años bisiestos julianos que no son bisiestos gregorianos desde
+    //numero de aï¿½os bisiestos julianos que no son bisiestos gregorianos desde
     // 1582
     private static int notleapsince1582(int anio) {
         return ((anio >= 1600) ? anio / 100 - 16 : 0)
                 - ((anio >= 2000) ? anio / 400 - 4 : 0);
     }
 
-    //numero de años bisiestos desde el año 1
+    //numero de aï¿½os bisiestos desde el aï¿½o 1
     private static int leapsince1(int anio) {
         return anio / 4 - notleapsince1582(anio);
     }
@@ -159,7 +159,7 @@ public class Easter {
         while (ep > 30)
             ep -= 30;
 
-       // System.out.println("Año " + anio + ". Bisiesto? " + isleap(anio));
+       // System.out.println("Aï¿½o " + anio + ". Bisiesto? " + isleap(anio));
        // System.out.println("El numero aureo es " + gn + ". La epacta es " + ep);
 
         llena = pascal[ep];
@@ -206,7 +206,7 @@ public class Easter {
 
     } // Fin dayofweek()
 
-    //Dia juliano (numero del dia dentro del año)
+    //Dia juliano (numero del dia dentro del aï¿½o)
     private static int jday(int dia, int mes, int ano) {
         int temp = 0, i;
 
@@ -253,6 +253,7 @@ public class Easter {
     /**
      * Devuelve como String el dia y el mes de la fecha en que cae la luna
      * llena pascual.
+     * @author ocm128
      * @return String
      */
     public String diaLunaLLenaPascual() {
@@ -260,8 +261,8 @@ public class Easter {
     }
 
     /**
-     *  Devuelve como String el dia de la pascua de resurreción.
-     * @author Kalasni
+     *  Devuelve como String el dia de la pascua de resurreciï¿½n.
+     * @author ocm128
      * @return String
      */
     public String diaPascuaString() {
@@ -269,8 +270,8 @@ public class Easter {
     }
 
     /**
-     * Devuelve el valor de día unicamente.
-     * @author Kalasni
+     * Devuelve el valor de dï¿½a unicamente.
+     * @author ocm128
      * @return int
      */
     public int diaPascuaInt() {
@@ -279,7 +280,7 @@ public class Easter {
 
     /**
      * Devuelve el valor de mes unicamente.
-     *  @author Kalasni
+     *  @author ocm128
      * @return int
      */
     public int mesPascuaInt() {
@@ -288,7 +289,7 @@ public class Easter {
 
     /**
      * Esta es la clase donde se introducen y son devueltos como String,
-     * el día y el mes como juntos.
+     * el dï¿½a y el mes como juntos.
      */
     static class Fecha {
 
@@ -318,7 +319,7 @@ public class Easter {
   /*  public static void main(String Args[]) {
             Easter ea = new Easter();
             if (Args.length == 0) {
-                System.out.println("Introduce año. easter <año>");
+                System.out.println("Introduce aï¿½o. easter <aï¿½o>");
             } else {
                anio = Integer.parseInt(Args[0]);
                anio = java.lang.Math.abs(anio);

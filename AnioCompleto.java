@@ -15,9 +15,9 @@ import java.io.IOException;
 
 /**
  *   Esta clase se encarga de mostrar los componentes necesarios para
- *   la visualización del año introducido completo
+ *   la visualizaciï¿½n del aï¿½o introducido completo
  *
- *   @author Kalasni
+ *   @author ocm128
  *   @version 1.0
  *   @since 21-07-2005
  *
@@ -59,7 +59,7 @@ class AnioCompleto extends JPanel {
         kit = Toolkit.getDefaultToolkit();
         clipboard = kit.getSystemClipboard();
 
-        lyy = new JLabel("Introduce el año");
+        lyy = new JLabel("Introduce el aï¿½o");
         yy = new JTextField(5);
         jbentrar = new JButton("ENTRAR");
         jborrar = new JButton("BORRAR");
@@ -93,7 +93,7 @@ class AnioCompleto extends JPanel {
 
     }
 
-    /* Panel para introducir el mes y el año y mostrar los botones de
+    /* Panel para introducir el mes y el aï¿½o y mostrar los botones de
      * entrada y borrado de la salida.
      */
     private void panelEntrada() {
@@ -123,7 +123,7 @@ class AnioCompleto extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 try {
                     if (Integer.parseInt(yy.getText()) < 13) {
-                        JOptionPane.showMessageDialog(null, "Introduce año mayor que 13",
+                        JOptionPane.showMessageDialog(null, "Introduce aï¿½o mayor que 13",
                                 "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     else {
@@ -133,7 +133,7 @@ class AnioCompleto extends JPanel {
                     }
                 }
                 catch (NumberFormatException ex) {
-                    JOptionPane.showMessageDialog(null, "     ¡Introduce año!",
+                    JOptionPane.showMessageDialog(null, "     ï¿½Introduce aï¿½o!",
                             "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
@@ -166,7 +166,7 @@ class AnioCompleto extends JPanel {
      * y la ruta del fichero, en el que vamos a guardar la salida formateada
      * del JtextArea "salida".
      * Para que la salida quede formateada de la misma manera que en el
-     * Jtextarea, será necesario visualizarlo con un editor en el que la fuente
+     * Jtextarea, serï¿½ necesario visualizarlo con un editor en el que la fuente
      * seleccionada sea alguna de las llamadas "monospaced" (que cualquier
      * caracter ocupa lo mismo).
      *

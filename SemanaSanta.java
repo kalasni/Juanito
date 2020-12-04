@@ -6,7 +6,7 @@ import java.awt.event.*;
 import java.util.Calendar;
 
 /**
- * @author Kalasni
+ * @author ocm128
  * @version 1.0
  */
 
@@ -42,7 +42,7 @@ class SemanaSanta extends JPanel {
         // Inicializar campos
         jtarea = new JTextArea();
         tyear = new JTextField();
-        lyear = new JLabel("Introduce año");
+        lyear = new JLabel("Introduce aï¿½o");
         imagen = new JLabel("", new ImageIcon("imagenes/calendarioazteca.jpg"),
                 JLabel.CENTER);
         jbaceptar = new JButton("OK");
@@ -75,7 +75,7 @@ class SemanaSanta extends JPanel {
         
     }
     
-    /* Panel para introducir el mes y año */
+    /* Panel para introducir el mes y aï¿½o */
     private void paneAceptar() {
               
         jpaceptar = new JPanel();
@@ -107,7 +107,7 @@ class SemanaSanta extends JPanel {
                     jtarea.setText(calenpage.devuelveCadena().toString());
                 }
                 catch (NumberFormatException index) {
-                    JOptionPane.showMessageDialog(null, "   ¡Introduce un año!",
+                    JOptionPane.showMessageDialog(null, "   ï¿½Introduce un aï¿½o!",
                             "Error", JOptionPane.ERROR_MESSAGE);                 
                 }               
             }  

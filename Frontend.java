@@ -10,10 +10,10 @@ import java.awt.Toolkit;
 import javax.swing.text.*;
 
 /** Esta es la clase donde van la interfaz grafica basica y de
- *   presentación del programa.
- *   En ella es donde se van a mostrar desde un principio las pestañas
+ *   presentaciï¿½n del programa.
+ *   En ella es donde se van a mostrar desde un principio las pestaï¿½as
  *   donde van a ir apareciendo los diferentes marcos.
- *   @author Kalasni
+ *   @author ocm128
  *   @version 1.0
  *   @since 16-06-05
  */
@@ -48,7 +48,7 @@ import javax.swing.text.*;
          tabbedPane.setBackground(Color.blue);
          tabbedPane.setForeground(Color.white);
 
-         // Metodo que añade las pestañas individuales
+         // Metodo que aï¿½ade las pestaï¿½as individuales
          addTabbedPane();
 
          // Metodo barra de menu.
@@ -65,18 +65,18 @@ import javax.swing.text.*;
 
      private void addTabbedPane() {
 
-         // Creamos las pestañas con sus titulos.
+         // Creamos las pestaï¿½as con sus titulos.
          tabbedPane.addTab("Leeme", null,  new LeeMe(),
                  "Uso del programa");
 
          tabbedPane.addTab("Mes actual", null, new MesActual(),
                  "Muestra la fecha y el mes actual");
 
-         tabbedPane.addTab("Mes del año", null, new MesDelAnio(),
-                 "Muestra el mes del año introducido");
+         tabbedPane.addTab("Mes del aï¿½o", null, new MesDelAnio(),
+                 "Muestra el mes del aï¿½o introducido");
 
-         tabbedPane.addTab("Año completo", null, new AnioCompleto(),
-                 "Muestra el año introducido completo");
+         tabbedPane.addTab("Aï¿½o completo", null, new AnioCompleto(),
+                 "Muestra el aï¿½o introducido completo");
 
          tabbedPane.addTab("San Juan del Monte", null, new SanJuan(),
                  "Calcular fechas de San Juan del Monte");
@@ -134,12 +134,12 @@ import javax.swing.text.*;
 
      /**
       * Metodo que muestra la etiqueta de la barra de menu "Ayuda".
-      * @autor Kalasni
+      * @autor ocm128
       */
      public void acercaDe () {
          JOptionPane.showMessageDialog(null, "\nJuanito v1.0\n\n" +
-         		"by Kalasni\n\n" +
-                "Email:  kalassni@gmail.com\n\n",
+         		"by ocm128\n\n" +
+                "Email:  tdoc@tutamail.com\n\n",
                 "Acerca de", JOptionPane.INFORMATION_MESSAGE);
      }
 

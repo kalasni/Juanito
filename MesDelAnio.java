@@ -6,9 +6,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 /** Esta clase se encarga de mostrar los componentes necesarios para
- *   la visualización del mes y el año introducidos en los JTextField
+ *   la visualizaciï¿½n del mes y el aï¿½o introducidos en los JTextField
  *   correspondientes.
- *  @author Kalasni
+ *  @author ocm128
  *  @version 1.0
  *  @since 23-6-2005
  *
@@ -47,7 +47,7 @@ class MesDelAnio extends JPanel {
         jtarea = new JTextArea();
         tyear = new JTextField();
         tmonth = new JTextField();
-        lyear = new JLabel("Introduce año");
+        lyear = new JLabel("Introduce aï¿½o");
         lmonth = new JLabel("Introduce mes");
         imagen = new JLabel("", new ImageIcon("imagenes/calendarioazteca.jpg"),
                 JLabel.CENTER);
@@ -81,7 +81,7 @@ class MesDelAnio extends JPanel {
 
     }
 
-    /* Panel para introducir el mes y año */
+    /* Panel para introducir el mes y aï¿½o */
     private void paneAceptar() {
 
         jpaceptar = new JPanel();
@@ -119,7 +119,7 @@ class MesDelAnio extends JPanel {
                                 "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     if( Integer.parseInt(tyear.getText()) < 13) {
-                        JOptionPane.showMessageDialog(null, "Introduce año mayor que 13",
+                        JOptionPane.showMessageDialog(null, "Introduce aï¿½o mayor que 13",
                                 "Error", JOptionPane.ERROR_MESSAGE);
                     }
                     else {
@@ -129,7 +129,7 @@ class MesDelAnio extends JPanel {
                     }
                 }
                 catch(Exception ex) {
-                    JOptionPane.showMessageDialog(null, " ¡Introduce mes y año!",
+                    JOptionPane.showMessageDialog(null, " ï¿½Introduce mes y aï¿½o!",
                             "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
